@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video API</title>
+</head>
+<body>
+<video controls>
+  <source src="spill.mp4" type="video/mp4">
+  <source src="spill.ogg" type="video/ogg">
+  Your browser does not support the <code>video</code> element.
+</video>
+
+<script>
+  var video;
+      window.addEventListener('load', init, false);
+      window.addEventListener('click', playPause, false)
+  function playPause() {
+    if(video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+  function init() {
+    video = document.getElementsByTagName('video')[0];
+    video.play();
+  }
+</script>
+</body>
+</html>

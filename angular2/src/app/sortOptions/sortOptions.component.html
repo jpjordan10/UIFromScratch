@@ -1,0 +1,5 @@
+<select [(ngModel)]="selected" (ngModelChange)="onChange()" class="form-control">
+  <option *ngFor="let sortOption of sortOptions" value= {{sortOption.value}}>
+    {{sortOption.text}}
+  </option>
+</select>
